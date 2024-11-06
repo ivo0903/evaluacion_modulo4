@@ -1,0 +1,259 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-image: url("../img/fondo.jpg.jpg");
+    font-family: "Cabin", serif;
+}
+
+
+#linea-tiempo {
+    position: relative;
+    max-width: 920px;
+    width: 100%;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+#linea-tiempo .linea-vertical {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00FF9C;
+    z-index: -1;
+}
+
+.linea-tiempo-intervalos {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    position: relative;
+    align-items: center;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contenido-lado-izquierdo,
+.contenido-lado-derecho {
+    flex: 1;
+    max-width: 40%;
+    cursor: pointer;
+}
+
+.lado-izquierdo,
+.lado-derecho {
+    border: 2px solid #FFE700;
+    box-shadow: 2px 2px 4px #EB8317, -5px -5px 10px #EB8317;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.linea-tiempo-intervalos h1,
+.linea-tiempo-intervalos h4 {
+    color: #FEF9D9;
+    text-align: center;
+}
+
+.linea-tiempo-intervalos h1 {
+    font-size: 2rem;
+}
+
+.linea-tiempo-intervalos p {
+    font-weight: 400;
+    color: #FEF9D9;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 0 60px;
+}
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 51.5%;
+    width: 40px;
+    height: 40px;
+    margin-left: -35px;
+    border-radius: 50%;
+    background: #FF6600;
+    box-shadow: 3px 3px 8px #8FD14F, -3px -3px 7px #604CC3;
+}
+
+.circulo-uno,
+.circulo-seis,
+.circulo-once {
+    width: 38px;
+    height: 38px;
+    margin-top: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    margin-left: -1px;
+}
+
+.circulo-uno { background-color: red; }
+.circulo-seis { background-color: green; }
+.circulo-once { background-color: blue; }
+
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+    width: 90%;
+    padding: 0 20px;
+}
+
+h6 {
+    color: #FFE700;
+    font-size: 1rem;
+    margin-top: 1px;
+}
+
+.timeline-text p{
+    color: #FEEE91; 
+    font-size: 0.8rem;
+    margin:0;
+    padding: 0;
+}
+
+.timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    top: 0;
+    margin-left: 5px;
+}
+
+.red-circle { background-color: red;}
+.green-circle { background-color: green; }
+.blue-circle { background-color: blue; }
+
+.single-timeline-content{
+    border: 1px solid #86D293;
+    background-color: transparent;
+    
+    border-radius: 10px;
+    min-width: 100px;
+    max-width: 150px;
+    height: 10rem;
+    text-align: center;
+    flex: 1;
+}
+
+/*===== parte resposiva =====*/
+
+@media (max-width: 600px) {
+    #linea-tiempo {
+        margin-left: 0; 
+    }
+
+    #linea-tiempo .linea-vertical {
+        width: 6px;
+    }
+
+    .contenido-lado-izquierdo,
+    .contenido-lado-derecho {
+        max-width: 25%; 
+        margin: 0 auto; 
+    }
+
+    .character-container {
+        flex-direction: row; 
+    }
+
+    .character-container > div {
+        flex: 0 0 30%; 
+        max-width: 30%; 
+    }
+
+    .character-container > div:nth-child(n+4) {
+        flex: 0 0 45%; 
+        max-width: 45%; 
+    }
+
+    .circulo-uno,
+    .circulo-seis,
+    .circulo-once {
+    width: 25px;
+    height: 25px;
+
+}
+.linea-tiempo-intervalos p {
+    font-size: 0.6rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+
+h6{
+    font-size: 0.8rem;
+}
+}
+
+
+@media (min-width: 601px) and (max-width: 1048px) {
+    #linea-tiempo {
+        margin-left: 2rem;
+    }
+
+    .contenido-lado-izquierdo {
+        max-width: 45%;
+    }
+
+    .contenido-lado-derecho {
+        max-width: 35%; 
+        margin-left: 10px; 
+    }
+
+    .linea-tiempo-intervalos h1 {
+        font-size: 1.5rem;
+    }
+
+    .linea-tiempo-intervalos p {
+        font-size: 12px;
+        margin: 0 0 0 30px;
+    }
+
+    .single-timeline-content {
+        min-width: 80px;
+        max-width: 120px;
+        height: 8rem;
+    }
+
+    .circulo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .circulo-uno,
+    .circulo-seis,
+    .circulo-once {
+        width: 30px;
+        height: 30px;
+    }
+
+    h6{
+        font-size: 0.8rem;
+    }
+
+    .circulo {
+        margin-left: -28px;
+
+    }
+
+}
